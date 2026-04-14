@@ -1,0 +1,5 @@
+LIB-001|La teoria del todo|Stephen Hawking|2002|No ficcion|true
+LIB-002|Habitos atomicos|James Clear|2018|Autoayuda|true
+LIB-003|Los cuatro acuerdos|Miguel Ruiz|1997|Autoayuda|false
+LIB-004|El libro que nadie debe leer|Raquel Levinstein Hernandez|2020|Autoayuda|false
+LIB-005|Mi sistema|Aaron Nimzovich|1925|No Ficcion|true

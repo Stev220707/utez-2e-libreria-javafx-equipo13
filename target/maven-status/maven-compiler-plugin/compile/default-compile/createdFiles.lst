@@ -1,0 +1,10 @@
+com\example\utez2elibreriajavafxequipo13\Launcher.class
+com\example\utez2elibreriajavafxequipo13\HelloController.class
+com\example\utez2elibreriajavafxequipo13\repository\FileRepository.class
+com\example\utez2elibreriajavafxequipo13\HelloApplication.class
+com\example\utez2elibreriajavafxequipo13\controller\FormController.class
+com\example\utez2elibreriajavafxequipo13\controller\DetailController.class
+com\example\utez2elibreriajavafxequipo13\service\LibroService.class
+com\example\utez2elibreriajavafxequipo13\controller\MainController.class
+com\example\utez2elibreriajavafxequipo13\model\Libro.class
+module-info.class

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.utez2elibreriajavafxequipo13.controller.FormController"
+      style="-fx-background-color: #f0f0f0;"
+      prefWidth="500" prefHeight="550">
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40"/>
+    </padding>
+
+    <Label text="Registro de Libro" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="15" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints minWidth="100" prefWidth="120" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <Label text="ID Automatico:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="id" editable="false" focusTraversable="false"
+                   style="-fx-background-color: #e0e0e0; -fx-text-fill: #555; -fx-font-weight: bold;"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Titulo:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="titulo" promptText="Titulo Del Libro" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Autor:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="autor" promptText="Nombre Del Autor" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Año:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="anio" promptText="Año De Publicacion" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Genero:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4" alignment="CENTER_LEFT">
+            <ComboBox fx:id="comboGenero" promptText="Seleccionar Genero" prefWidth="180"/>
+            <TextField fx:id="genero" promptText="¿Cual?" visible="false" managed="false" prefWidth="120"/>
+        </HBox>
+
+        <Label text="Estado:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <HBox spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <RadioButton fx:id="rbDisponible" text="Disponible"/>
+            <RadioButton fx:id="rbPrestado" text="No Disponible"/>
+        </HBox>
+    </GridPane>
+
+    <Button text="Guardar Cambios" onAction="#guardar" maxWidth="Infinity"
+            style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 12;"/>
+</VBox>

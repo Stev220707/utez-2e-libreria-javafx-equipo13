@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.utez2elibreriajavafxequipo13.controller.MainController"
+            style="-fx-background-color: #1e272e;">
+
+    <top>
+        <HBox spacing="15" style="-fx-background-color: #2f3640; -fx-padding: 15;">
+            <Label text="📚 Sistema de Libreria"
+                   style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+            <TextField fx:id="buscar" promptText="Buscar libro..."
+                       style="-fx-font-size: 14px; -fx-background-radius: 10;"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Label fx:id="lblTotal"
+                   style="-fx-text-fill: #00ffcc; -fx-font-size: 14px;"/>
+
+            <Label fx:id="lblReloj"
+                   style="-fx-text-fill: #00ffcc; -fx-font-size: 16px;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <SplitPane dividerPositions="0.65">
+
+            <AnchorPane>
+                <TableView fx:id="tabla" AnchorPane.topAnchor="0.0"
+                           AnchorPane.bottomAnchor="0.0"
+                           AnchorPane.leftAnchor="0.0"
+                           AnchorPane.rightAnchor="0.0">
+
+                    <columns>
+                        <TableColumn fx:id="colISBN" text="ID"/>
+                        <TableColumn fx:id="colTitulo" text="Titulo"/>
+                        <TableColumn fx:id="colAutor" text="Autor"/>
+                        <TableColumn fx:id="colGenero" text="Genero"/>
+                        <TableColumn fx:id="colAnio" text="Año"/>
+                        <TableColumn fx:id="colDisponible" text="Estado"/>
+                    </columns>
+
+                </TableView>
+            </AnchorPane>
+
+            <VBox spacing="20"
+                  style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom, #2f3640, #353b48);">
+
+                <Label text="📖 Detalle del Libro"
+                       style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+                <VBox spacing="15"
+                      style="-fx-background-color: #3d3d3d;
+                             -fx-padding: 20;
+                             -fx-background-radius: 12;
+                             -fx-effect: dropshadow(gaussian, black, 10, 0.3, 0, 4);">
+
+                    <VBox spacing="3">
+                        <Label text="ID" style="-fx-text-fill: #b2bec3; -fx-font-size: 12px;"/>
+                        <Label fx:id="lblId"
+                               style="-fx-text-fill: white; -fx-font-size: 15px;"/>
+                    </VBox>
+
+                    <VBox spacing="3">
+                        <Label text="Titulo" style="-fx-text-fill: #b2bec3; -fx-font-size: 12px;"/>
+                        <Label fx:id="lblTitulo"
+                               wrapText="true"
+                               maxWidth="250"
+                               style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+                    </VBox>
+
+                    <VBox spacing="3">
+                        <Label text="Autor" style="-fx-text-fill: #b2bec3; -fx-font-size: 12px;"/>
+                        <Label fx:id="lblAutor"
+                               wrapText="true"
+                               maxWidth="250"
+                               style="-fx-text-fill: white; -fx-font-size: 15px;"/>
+                    </VBox>
+
+                    <VBox spacing="3">
+                        <Label text="Genero" style="-fx-text-fill: #b2bec3; -fx-font-size: 12px;"/>
+                        <Label fx:id="lblGenero"
+                               wrapText="true"
+                               maxWidth="250"
+                               style="-fx-text-fill: white; -fx-font-size: 15px;"/>
+                    </VBox>
+
+                    <VBox spacing="3">
+                        <Label text="Año" style="-fx-text-fill: #b2bec3; -fx-font-size: 12px;"/>
+                        <Label fx:id="lblAnio"
+                               style="-fx-text-fill: white; -fx-font-size: 15px;"/>
+                    </VBox>
+
+                    <VBox spacing="3">
+                        <Label text="Estado" style="-fx-text-fill: #b2bec3; -fx-font-size: 12px;"/>
+                        <Label fx:id="lblEstado"
+                               style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    </VBox>
+
+                </VBox>
+
+            </VBox>
+
+        </SplitPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="15" alignment="CENTER"
+              style="-fx-padding: 15; -fx-background-color: #2f3640;">
+
+            <Button text="➕ Nuevo" onAction="#nuevo" style="-fx-font-size: 14px;"/>
+            <Button text="✏ Editar" onAction="#editar" style="-fx-font-size: 14px;"/>
+            <Button text="🗑 Eliminar" onAction="#eliminar" style="-fx-font-size: 14px;"/>
+            <Button text="🔍 Detalle" onAction="#detalle" style="-fx-font-size: 14px;"/>
+            <Button text="📤 Exportar" onAction="#exportar" style="-fx-font-size: 14px;"/>
+            <Button text="💾 Exportar Como" onAction="#exportarComo" style="-fx-font-size: 14px;"/>
+
+        </HBox>
+    </bottom>
+
+</BorderPane>
