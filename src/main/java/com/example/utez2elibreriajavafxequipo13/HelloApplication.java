@@ -8,9 +8,11 @@ import javafx.stage.Stage;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("view/MainView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 950, 650);
-        stage.setTitle("Catalogo de Biblioteca - Equipo 13");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/MainView.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
+
+        stage.setTitle("Sistema de Gestion de Biblioteca - Equipo 13");
         stage.setScene(scene);
         stage.show();
     }

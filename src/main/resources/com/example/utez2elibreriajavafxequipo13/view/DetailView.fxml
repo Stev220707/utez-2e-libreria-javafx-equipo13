@@ -3,15 +3,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.utez2elibreriajavafxequipo13.controller.DetailController"
-      style="-fx-background-color: white; -fx-border-color: #3498db; -fx-border-width: 2;">
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.utez2elibreriajavafxequipo13.controller.DetailController">
     <padding>
-        <Insets top="30" right="30" bottom="30" left="30"/>
+        <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <Label text="Ficha Tecnica" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #3498db;"/>
+    <Label text="Detalles del Libro" />
     <Separator/>
-    <Label fx:id="datos" style="-fx-font-size: 15px; -fx-line-spacing: 10;" wrapText="true"/>
-    <Button text="Cerrar" onAction="#cerrar" style="-fx-background-color: #95a5a6;"/>
+    <Label fx:id="datos" wrapText="true"/>
+    <Button text="Cerrar" onAction="#cerrar" />
 </VBox>

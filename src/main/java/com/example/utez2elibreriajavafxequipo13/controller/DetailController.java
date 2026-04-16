@@ -11,14 +11,11 @@ public class DetailController {
 
     public void setLibro(Libro l) {
         if (l != null) {
-            datos.setText(
-                    "ID: " + l.getId() + "\n" +
-                            "Título: " + l.getTitulo() + "\n" +
-                            "Autor: " + l.getAutor() + "\n" +
-                            "Año: " + l.getAnio() + "\n" +
-                            "Género: " + l.getGenero() + "\n" +
-                            "Estado: " + (l.isDisponible() ? "Disponible" : "Prestado")
-            );
+            datos.setText(String.format(
+                    "ID: %s\nTITULO: %s\nAUTOR: %s\nAÑO: %d\nGENERO: %s\nESTADO: %s",
+                    l.getId(), l.getTitulo(), l.getAutor(), l.getAnio(), l.getGenero(),
+                    l.isDisponible() ? "Disponible" : "No Disponible"
+            ));
         }
     }
 

@@ -1,12 +1,8 @@
 package com.example.utez2elibreriajavafxequipo13.model;
 
 public class Libro {
-
-    private String id;
-    private String titulo;
-    private String autor;
+    private String id, titulo, autor, genero;
     private int anio;
-    private String genero;
     private boolean disponible;
 
     public Libro(String id, String titulo, String autor, int anio, String genero, boolean disponible) {
@@ -18,6 +14,7 @@ public class Libro {
         this.disponible = disponible;
     }
 
+    // Getters
     public String getId() { return id; }
     public String getTitulo() { return titulo; }
     public String getAutor() { return autor; }
@@ -25,10 +22,16 @@ public class Libro {
     public String getGenero() { return genero; }
     public boolean isDisponible() { return disponible; }
 
+    // Setters
     public void setId(String id) { this.id = id; }
-    public void setTitulo(String titulo) { this.titulo = titulo; }
-    public void setAutor(String autor) { this.autor = autor; }
-    public void setAnio(int anio) { this.anio = anio; }
-    public void setGenero(String genero) { this.genero = genero; }
-    public void setDisponible(boolean disponible) { this.disponible = disponible; }
+    public void setTitulo(String t) { this.titulo = t; }
+    public void setAutor(String a) { this.autor = a; }
+    public void setAnio(int n) { this.anio = n; }
+    public void setGenero(String g) { this.genero = g; }
+    public void setDisponible(boolean d) { this.disponible = d; }
+
+    @Override
+    public String toString() {
+        return id + "|" + titulo + "|" + autor + "|" + anio + "|" + genero + "|" + disponible;
+    }
 }

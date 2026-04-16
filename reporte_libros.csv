@@ -1,3 +1,6 @@
 ID,Titulo,Autor,Año,Genero,Disponible
-LIB-001,masha y el oso,bagre,2026,accion,Si
-LIB-002,caperucita,david,2020,Infantil,No
+LIB-001,La teoria del todo,Stephen Hawking,2002,No ficcion,Si
+LIB-002,Habitos atomicos,James Clear,2018,Autoayuda,Si
+LIB-003,Los cuatro acuerdos,Miguel Ruiz,1997,Autoayuda,No
+LIB-004,El libro que nadie debe leer,Raquel Levinstein Hernandez,2020,Autoayuda,No
+LIB-005,Mi sistema,Aaron Nimzovich,1925,No Ficcion,Si
