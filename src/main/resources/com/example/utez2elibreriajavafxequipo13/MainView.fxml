@@ -7,8 +7,8 @@
 
     <top>
         <HBox spacing="15" style="-fx-padding: 15;">
-            <Label text="Gestión de Biblioteca" style="-fx-font-weight: bold;"/>
-            <TextField fx:id="buscar" promptText="Buscar por título o autor..." prefWidth="250"/>
+            <Label text="Gestion de Biblioteca" style="-fx-font-weight: bold;"/>
+            <TextField fx:id="buscar" promptText="Buscar por titulo o autor..." prefWidth="250"/>
             <Pane HBox.hgrow="ALWAYS"/>
             <Label fx:id="lblTotal" text="Libros: 0" />
         </HBox>
@@ -19,9 +19,9 @@
             <TableView fx:id="tabla">
                 <columns>
                     <TableColumn fx:id="colISBN" text="ID" prefWidth="80"/>
-                    <TableColumn fx:id="colTitulo" text="Título" prefWidth="150"/>
+                    <TableColumn fx:id="colTitulo" text="Titulo" prefWidth="150"/>
                     <TableColumn fx:id="colAutor" text="Autor" prefWidth="120"/>
-                    <TableColumn fx:id="colGenero" text="Género" prefWidth="100"/>
+                    <TableColumn fx:id="colGenero" text="Genero" prefWidth="100"/>
                     <TableColumn fx:id="colAnio" text="Año" prefWidth="60"/>
                     <TableColumn fx:id="colDisponible" text="Estado" prefWidth="100"/>
                 </columns>
@@ -31,11 +31,11 @@
                 <Label text="Vista Previa" style="-fx-font-weight: bold; -fx-underline: true;" />
                 <Label text="ID:" />
                 <Label fx:id="lblId" style="-fx-text-fill: gray;" />
-                <Label text="Título:" />
+                <Label text="Titulo:" />
                 <Label fx:id="lblTitulo" wrapText="true" style="-fx-font-weight: bold;" />
                 <Label text="Autor:" />
                 <Label fx:id="lblAutor" />
-                <Label text="Género:" />
+                <Label text="Genero:" />
                 <Label fx:id="lblGenero" />
                 <Label text="Año:" />
                 <Label fx:id="lblAnio" />
@@ -50,7 +50,7 @@
             <Button text="Añadir Libro" onAction="#nuevo" />
             <Button text="Modificar" onAction="#editar" />
             <Button text="Quitar" onAction="#eliminar" />
-            <Button text="Ficha Técnica" onAction="#detalle" />
+            <Button text="Ficha Tecnica" onAction="#detalle" />
             <Button text="Generar CSV" onAction="#exportar" />
         </HBox>
     </bottom>
