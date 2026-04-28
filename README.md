@@ -1,34 +1,65 @@
-Sistema de Gestión de Biblioteca - Equipo 13
--- Descripción del Proyecto --
-Este sistema fue desarrollado para la gestión integral de una biblioteca, permitiendo realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre un catálogo de libros. El enfoque principal fue la organización profesional del código, la experiencia de usuario y la persistencia de datos en archivos planos.
+# Sistema de Gestión de Biblioteca - Equipo 13
 
--- Arquitectura de N-Capas --
-El proyecto implementa una separación de responsabilidades para facilitar su escalabilidad:
+## Descripción del Proyecto
+Este sistema fue desarrollado para la gestión de una biblioteca, permitiendo realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre un catálogo de libros.
 
-Controller: Gestiona la interacción entre la vista (FXML) y la lógica (MainController, FormController, DetailController).
+El proyecto se enfoca en la organización del código, la validación de datos y la persistencia de la información mediante archivos.
 
-Service: Contiene la lógica de negocio y las validaciones de integridad (LibroService).
+---
 
-Repository: Se encarga exclusivamente de la persistencia y el flujo de datos (FileRepository).
+## Arquitectura
+El sistema está estructurado en una arquitectura por capas para mejorar la organización y mantenimiento:
 
-Model: Define la entidad principal del sistema (Libro).
+- Controller: Maneja la interacción entre la interfaz gráfica (FXML) y la lógica del sistema.
+    - Clases: MainController, FormController, DetailController
 
-Utilities: Incluye el validador estricto de entradas (InputValidator).
+- Service: Contiene la lógica de negocio y las validaciones.
+    - Clase: LibroService
 
--- Persistencia y Reportes --
-Archivo de texto: La información se almacena en libros.txt, garantizando que los registros se mantengan tras cerrar la aplicación.
+- Repository: Gestiona la persistencia de los datos.
+    - Clase: FileRepository
 
-Exportación: Se incluye una función de exportación a reporte_libros.csv (formato universal compatible con Excel).
+- Model: Representa la entidad principal del sistema.
+    - Clase: Libro
 
--- Requisitos Implementados --
-Control de Versiones: Uso de flujo de trabajo Git Flow con ramas de desarrollo y producción.
+- Utilities: Incluye herramientas auxiliares para validación.
+    - Clase: InputValidator
 
-Validaciones Estrictas: Sistema de seguridad que bloquea campos vacíos, años fuera de rango y detección de "texto basura" (teclazos aleatorios).
+---
 
-Interfaz Gráfica: Diseño moderno y responsivo utilizando JavaFX, Scene Builder y CSS.
+## Persistencia de Datos
+La información se almacena en un archivo de texto llamado `libros.txt`, lo que permite conservar los datos incluso después de cerrar la aplicación.
 
-Desarrollado por: Steven Romero
+---
 
-Grado y Grupo: 2°E
+## Exportación
+El sistema incluye una función para exportar los datos a un archivo `reporte_libros.csv`, compatible con herramientas como Excel.
 
-Equipo: 13 
+---
+
+## Funcionalidades
+- Registro de libros
+- Edición de información
+- Eliminación de registros
+- Validación de datos de entrada
+- Exportación de información
+
+---
+
+## Tecnologías utilizadas
+- Java
+- JavaFX
+- Scene Builder
+- CSS
+
+---
+
+## Control de versiones
+Se utilizó Git para el control de versiones, trabajando con múltiples ramas para desarrollo y pruebas.
+
+---
+
+## Información del proyecto
+Desarrollado por: Steven Romero  
+Grado y Grupo: 2°E  
+Equipo: 13
